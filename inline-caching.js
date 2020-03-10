@@ -7,9 +7,9 @@ const obj1 = {
 }
 
 const obj2 = {
-  y: 4
+  x: 4
 }
-obj2.x = 2.2;
+obj2.y = 2.2;
 
 let iterations = 1e7;
 while ( iterations-- ) {

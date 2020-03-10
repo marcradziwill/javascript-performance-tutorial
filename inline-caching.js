@@ -1,13 +1,18 @@
-function add (a, b) {
-  return a + b; 
+function getX(o) {
+	return o.x;
 }
-var  i = 0;
-while ( i++ < 1000000000 ) {
-  add(1,2);
+const obj1 = {
+  x: 2,
+  y: 4.1
 }
-while ( i++ < 1000000000 ) {
-  add(1,2.3);
+
+const obj2 = {
+  y: 4
 }
-while ( i++ < 1000000000 ) {
-  add('1','2.3');
+obj2.x = 2.2;
+
+let iterations = 1e7;
+while ( iterations-- ) {
+  getX(obj1);
+  getX(obj2);
 }
